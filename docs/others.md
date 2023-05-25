@@ -1,12 +1,10 @@
-# 其他
+Informações Adicionais
 
-## 开源证书
+Certificado de Código Aberto
+Licença MIT
 
-MIT License
+Direitos autorais (c) 2021 zu1k
 
-Copyright (c) 2021 zu1k
-
-## 感谢列表
-
-- [**hudsucker**](https://github.com/omjadas/hudsucker): a Rust crate providing MITM features
+lista de agradecimentos
+hudsucker : uma caixa Rust que fornece recursos MITM
 
