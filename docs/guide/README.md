@@ -1,3 +1,3 @@
-# 指南
+guia
 
-这是指南，不是指北
+Este é um guia, não um norte
