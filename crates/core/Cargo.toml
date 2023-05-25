@@ -1,8 +1,8 @@
 [package]
-name = "firewallapp"
+name = "good-mitm-core"
 version = "0.4.2"
 authors = ["mvclaudianobj <mvclaudiano@gmail.com>"]
-edition = "2023"
+edition = "2021"
 description = "FirewallApp: Use MITM technology to provide features like rewrite, redirect."
 homepage = "https://github.com/mvclaudianobj/firewallapp"
 repository = "https://github.com/mvclaudianobj/firewallapp"
