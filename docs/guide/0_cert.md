@@ -1,19 +1,19 @@
-# 证书准备
+preparação de certificado
 
-为了实现对HTTPS流量进行MITM，同时为了浏览器等不显示安全警告，需要生成并信任自签名CA证书
+Para implementar o tráfego MITM para HTTPS e impedir que os navegadores exibam avisos de segurança, um certificado CA autoassinado precisa ser gerado e confiável
 
-## 生成CA证书
+Gerar certificado CA
 
-出于安全考虑，用户必须自己生成自己的CA证书，随意使用不可信的CA证书将会留下严重的安全隐患
+Por motivos de segurança, os usuários devem gerar seus próprios certificados de CA. O uso aleatório de certificados de CA não confiáveis ​​deixará sérios riscos de segurança
 
-经验丰富的用户可以自行使用OpenSSL进行相关操作，考虑到没有相关经验的用户，可以使用以下命令直接生成相关内容，生成的证书和私钥将存储在`ca`目录下
+Usuários experientes podem usar o OpenSSL para executar operações relacionadas por conta própria. Considerando usuários sem experiência relevante, eles podem usar os seguintes comandos para gerar conteúdo relevante diretamente. O certificado gerado e a chave privada serão armazenados no cadiretório
 
-```shell
-good-mitm.exe genca
-```
+./firewallapp genca
 
-在浏览器使用了Good-MITM提供的代理后，通过访问 [http://cert.mitm.plus](http://cert.mitm.plus) 可以直接下载证书，这在给其他设备提供服务时非常有用
+Copiar para área de transferênciaerrocopiado
 
-## 信任生成的证书
+Depois que o navegador usar o proxy fornecido pelo Good-MITM, você poderá baixar diretamente o certificado visitando http://cert.mitm.plus , o que é muito útil ao fornecer serviços para outros dispositivos
 
-你需要在浏览器或者操作系统中信任刚刚生成的证书，具体方法后期补充
+Confiar no certificado gerado
+
+Você precisa confiar no certificado recém-gerado no navegador ou sistema operacional, o método específico será adicionado posteriormente
