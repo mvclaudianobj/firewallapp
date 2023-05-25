@@ -1,12 +1,12 @@
 [package]
 name = "firewallapp"
 version = "0.4.2"
-authors = ["mvclaudianobj <mvclaudiano@gmail.com>"]
+authors = ["zu1k <i@zu1k.com>"]
 edition = "2021"
-description = "FirewallApp: Use MITM technology to provide features like rewrite, redirect."
+description = "Good Man in the Middle: Use MITM technology to provide features like rewrite, redirect."
 readme = "README.md"
-homepage = "https://github.com/mvclaudianobj/firewallapp"
-repository = "https://github.com/mvclaudianobj/firewallapp"
+homepage = "https://github.com/zu1k/good-mitm"
+repository = "https://github.com/zu1k/good-mitm"
 license = "MIT"
 keywords = ["proxy", "MITM"]
 exclude = [".github/", "docs/", "rules/"]
