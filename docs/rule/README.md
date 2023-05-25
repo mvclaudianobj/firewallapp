@@ -1,6 +1,6 @@
 Regras
 
-RuleUsado para controlar Good-MITM
+RuleUsado para controlar FirewallApp
 
 Uma regra de qualificação precisa conter o seguinte:
 

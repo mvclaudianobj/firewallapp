@@ -20,7 +20,7 @@ Para a configuração direta do tipo simples, o conteúdo será redefinido diret
     domain: '126.com'
   action:
     modify-response:
-      body: "Hello 126.com, from Good-MITM"
+      body: "Hello 126.com, from FirewallApp"
 Copiar para área de transferênciaerrocopiado
 substituir
 Substituição suporta substituição simples e substituição regular
@@ -32,8 +32,8 @@ substituição simples
   action:
     modify-response:
       body:
-        origin: "网易首页"
-        new: "Good-MITM 首页"
+        origin: "Hello"
+        new: "FirewallApp"
 Copiar para área de transferênciaerrocopiado
 substituição regular
 - name: "modify response body regex replace"
@@ -67,7 +67,7 @@ Se especificado removecomo true, o par chave-valor será excluído
     - modify-response:
         header:
           key: new-header-item
-          value: Good-MITM
+          value: FirewallApp
     - modify-response:
         header:
           key: server

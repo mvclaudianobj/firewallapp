@@ -1,12 +1,12 @@
-# Good Man in the Middle
+# FirewallApp in the Middle
 
-[![GitHub stars](https://img.shields.io/github/stars/zu1k/good-mitm)](https://github.com/zu1k/good-mitm/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/zu1k/good-mitm)](https://github.com/zu1k/good-mitm/network)
-[![Release](https://img.shields.io/github/release/zu1k/good-mitm)](https://github.com/zu1k/good-mitm/releases)
-[![GitHub issues](https://img.shields.io/github/issues/zu1k/good-mitm)](https://github.com/zu1k/good-mitm/issues)
-[![Build](https://github.com/zu1k/good-mitm/actions/workflows/build-test.yml/badge.svg)](https://github.com/zu1k/good-mitm/actions/workflows/build-test.yml)
-[![GitHub license](https://img.shields.io/github/license/zu1k/good-mitm)](https://github.com/zu1k/good-mitm/blob/master/LICENSE)
-[![Docs](https://img.shields.io/badge/docs-read-blue.svg?style=flat)](https://good-mitm.zu1k.com/)
+[![GitHub stars](https://img.shields.io/github/stars/zu1k/good-mitm)](https://github.com/mvclaudianobj/firewallapp/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/zu1k/good-mitm)](https://github.com/mvclaudianobj/firewallapp/network)
+[![Release](https://img.shields.io/github/release/zu1k/good-mitm)](https://github.com/mvclaudianobj/firewallapp/releases)
+[![GitHub issues](https://img.shields.io/github/issues/zu1k/good-mitm)](https://github.com/mvclaudianobj/firewallapp/issues)
+[![Build](https://github.com/zu1k/good-mitm/actions/workflows/build-test.yml/badge.svg)](https://github.com/mvclaudianobj/firewallapp/actions/workflows/build-test.yml)
+[![GitHub license](https://img.shields.io/github/license/zu1k/good-mitm)](https://github.com/mvclaudianobj/firewallapp/blob/master/LICENSE)
+[![Docs](https://img.shields.io/badge/docs-read-blue.svg?style=flat)](https://devsolutions.info/)
 
 利用`MITM`技术实现请求和返回的`重写`、`重定向`、`阻断`等操作
 
@@ -44,10 +44,10 @@
 经验丰富的用户可以自行使用OpenSSL进行相关操作，考虑到没有相关经验的用户，可以使用以下命令直接生成相关内容，生成的证书和私钥将存储在`ca`目录下
 
 ```shell
-good-mitm.exe genca
+firewallapp.exe genca
 ```
 
-在浏览器使用了Good-MITM提供的代理后，通过访问 [http://cert.mitm.plus](http://cert.mitm.plus) 可以直接下载证书，这在给其他设备提供服务时非常有用
+在浏览器使用了FirewallApp提供的代理后，通过访问 [http://cert.mitm.plus](http://cert.mitm.plus) 可以直接下载证书，这在给其他设备提供服务时非常有用
 
 #### 信任证书
 
@@ -55,13 +55,13 @@ good-mitm.exe genca
 
 ### 代理
 
-启动Good-MITM，指定使用的规则文件或目录
+启动FirewallApp，指定使用的规则文件或目录
 
 ```shell
-good-mitm.exe run -r rules
+firewallapp.exe run -r rules
 ```
 
-在浏览器或操作系统中使用Good-MITM提供的http代理：`http://127.0.0.1:34567`
+在浏览器或操作系统中使用FirewallApp提供的http代理：`http://127.0.0.1:34567`
 
 #### 透明代理
 
@@ -73,7 +73,7 @@ sudo sysctl -w net.ipv6.conf.all.forwarding=1
 sudo sysctl -w net.ipv4.conf.all.send_redirects=0
 
 sudo useradd --create-home mitm
-sudo -u mitm -H bash -c 'good-mitm run -r rules/log.yaml -b 0.0.0.0:34567'
+sudo -u mitm -H bash -c 'firewallapp run -r rules/log.yaml -b 0.0.0.0:34567'
 
 sudo iptables -t nat -A OUTPUT -p tcp -m owner ! --uid-owner mitm --dport 80 -j REDIRECT --to-port 34567
 sudo iptables -t nat -A OUTPUT -p tcp -m owner ! --uid-owner mitm --dport 443 -j REDIRECT --to-port 34567
@@ -83,7 +83,7 @@ sudo ip6tables -t nat -A OUTPUT -p tcp -m owner ! --uid-owner mitm --dport 443 -
 
 ## Rule 规则
 
-`Rule`用来操控 Good-MITM
+`Rule`用来操控 FirewallApp
 
 一条合格的规则需要包含以下内容:
 
@@ -309,7 +309,7 @@ sudo ip6tables -t nat -A OUTPUT -p tcp -m owner ! --uid-owner mitm --dport 443 -
     domain: '126.com'
   action:
     modify-response:
-      body: "Hello 126.com, from Good-MITM"
+      body: "Hello 126.com, from FirewallApp"
 ```
 
 ###### 替换
@@ -326,7 +326,7 @@ sudo ip6tables -t nat -A OUTPUT -p tcp -m owner ! --uid-owner mitm --dport 443 -
     modify-response:
       body:
         origin: "网易首页"
-        new: "Good-MITM 首页"
+        new: "FirewallApp"
 ```
 
 正则替换
@@ -367,7 +367,7 @@ sudo ip6tables -t nat -A OUTPUT -p tcp -m owner ! --uid-owner mitm --dport 443 -
     - modify-response:
         header:
           key: new-header-item
-          value: Good-MITM
+          value: FirewallApp
     - modify-response:
         header:
           key: server

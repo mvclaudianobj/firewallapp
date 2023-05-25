@@ -4,7 +4,7 @@ ARG TARGETARCH
 
 RUN apt-get update && apt-get install -y build-essential curl musl-tools upx pkg-config libssl-dev
 
-WORKDIR /root/good-mitm
+WORKDIR /root/firewallapp
 
 ADD . .
 
@@ -27,10 +27,10 @@ RUN rustup install nightly && rustup default nightly && \
     CC=/root/$MUSL-cross/bin/$MUSL-gcc && \
     rustup target add $RUST_TARGET && \
     PKG_CONFIG_ALLOW_CROSS=1 RUSTFLAGS="-C linker=$CC" CC=$CC cargo build --target "$RUST_TARGET" --release && \
-    mv target/$RUST_TARGET/release/good-mitm target/release/ && \
-    upx -9 target/release/good-mitm
+    mv target/$RUST_TARGET/release/firewallapp target/release/ && \
+    upx -9 target/release/firewallapp
 
-FROM alpine:3.14 AS good-mitm
+FROM alpine:3.14 AS firewallapp
 
-COPY --from=build /root/good-mitm/target/release/good-mitm /usr/bin
-ENTRYPOINT [ "good-mitm" ]
+COPY --from=build /root/firewallapp/target/release/firewallapp /usr/bin
+ENTRYPOINT [ "firewallapp" ]

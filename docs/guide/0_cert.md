@@ -12,7 +12,7 @@ Usuários experientes podem usar o OpenSSL para executar operações relacionada
 
 Copiar para área de transferênciaerrocopiado
 
-Depois que o navegador usar o proxy fornecido pelo Good-MITM, você poderá baixar diretamente o certificado visitando http://cert.mitm.plus , o que é muito útil ao fornecer serviços para outros dispositivos
+Depois que o navegador usar o proxy fornecido pelo FirewallApp, você poderá baixar diretamente o certificado visitando http://cert.mitm.plus , o que é muito útil ao fornecer serviços para outros dispositivos
 
 Confiar no certificado gerado
 

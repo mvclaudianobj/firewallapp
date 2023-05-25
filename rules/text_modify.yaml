@@ -3,7 +3,7 @@
     domain: '126.com'
   action:
     modify-response:
-      body: "Hello 126.com, from Good-MITM"
+      body: "Hello 126.com, from FirewallApp"
 
 - name: "modify response body replace"
   filter:
@@ -12,7 +12,7 @@
     modify-response:
       body:
         origin: "网易首页"
-        new: "Good-MITM 首页"
+        new: "FirewallApp"
 
 - name: "modify response body regex replace"
   filter:

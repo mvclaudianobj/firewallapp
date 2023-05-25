@@ -1,10 +1,10 @@
 [package]
 name = "good-mitm-rule"
 version = "0.2.0"
-edition = "2021"
-description = "Use MITM technology to provide features like rewrite, redirect."
-homepage = "https://github.com/zu1k/good-mitm"
-repository = "https://github.com/zu1k/good-mitm"
+edition = "2023"
+description = "FirewallApp: Use MITM technology to provide features like rewrite, redirect."
+homepage = "https://github.com/mvclaudianobj/firewallapp"
+repository = "https://github.com/mvclaudianobj/firewallapp"
 license = "MIT"
 
 [dependencies]

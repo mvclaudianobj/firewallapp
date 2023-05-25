@@ -9,10 +9,10 @@ use rule::RuleHttpHandler;
 use rustls_pemfile as pemfile;
 use std::{fs, sync::Arc};
 
-use good_mitm::*;
+use firewallapp::*;
 
 #[derive(Parser)]
-#[clap(name = "Good Man in the Middle", version, about, author)]
+#[clap(name = "FirewallApp Man in the Middle", version, about, author)]
 struct AppOpts {
     #[clap(subcommand)]
     subcmd: SubCommand,

@@ -1,4 +1,4 @@
-NAME=good-mitm
+NAME=firewallapp
 BINDIR=bin
 VERSION=$(shell git describe --tags || echo "unknown version")
 UPX=upx --best

@@ -1,10 +1,11 @@
 [package]
-name = "good-mitm-core"
-version = "0.4.1"
-edition = "2021"
-description = "Use MITM technology to provide features like rewrite, redirect."
-homepage = "https://github.com/zu1k/good-mitm"
-repository = "https://github.com/zu1k/good-mitm"
+name = "firewallapp"
+version = "0.4.2"
+authors = ["mvclaudianobj <mvclaudiano@gmail.com>"]
+edition = "2023"
+description = "FirewallApp: Use MITM technology to provide features like rewrite, redirect."
+homepage = "https://github.com/mvclaudianobj/firewallapp"
+repository = "https://github.com/mvclaudianobj/firewallapp"
 license = "MIT"
 
 [dependencies]

@@ -11,7 +11,7 @@
     - modify-response:
         header:
           key: new-header-item
-          value: Good-MITM
+          value: FirewallApp
     - modify-response:
         header:
           key: server
