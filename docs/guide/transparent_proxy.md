@@ -1,8 +1,6 @@
-# 透明代理
+proxy transparente
+Consulte https://docs.mitmproxy.org/stable/howto-transparent/ para obter os documentos.
 
-See https://docs.mitmproxy.org/stable/howto-transparent/ for docs.
-
-```shell
 sudo sysctl -w net.ipv4.ip_forward=1
 sudo sysctl -w net.ipv6.conf.all.forwarding=1
 sudo sysctl -w net.ipv4.conf.all.send_redirects=0
