@@ -1,5 +1,5 @@
 [package]
-name = "good-mitm-core"
+name = "firewallapp-core"
 version = "0.4.2"
 authors = ["mvclaudianobj <mvclaudiano@gmail.com>"]
 edition = "2021"

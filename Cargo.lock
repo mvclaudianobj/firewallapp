@@ -589,6 +589,71 @@ dependencies = [
 ]
 
 [[package]]
+name = "firewallapp"
+version = "0.4.2"
+dependencies = [
+ "anyhow",
+ "clap",
+ "env_logger",
+ "firewallapp-core",
+ "firewallapp-rule",
+ "hyper-proxy",
+ "log",
+ "rustls",
+ "rustls-pemfile",
+ "serde",
+ "serde_yaml",
+ "thiserror",
+ "tokio",
+ "trust_cert",
+]
+
+[[package]]
+name = "firewallapp-core"
+version = "0.4.2"
+dependencies = [
+ "async-trait",
+ "bytes",
+ "cfg-if",
+ "http",
+ "hyper",
+ "hyper-proxy",
+ "hyper-rustls",
+ "hyper-tls",
+ "log",
+ "moka",
+ "openssl",
+ "rand",
+ "rcgen",
+ "rustls",
+ "serde",
+ "thiserror",
+ "time",
+ "tokio",
+ "tokio-rustls",
+ "tokio-util",
+ "typed-builder",
+ "wildmatch",
+]
+
+[[package]]
+name = "firewallapp-rule"
+version = "0.2.0"
+dependencies = [
+ "anyhow",
+ "async-trait",
+ "cached",
+ "cookie",
+ "fancy-regex",
+ "firewallapp-core",
+ "http",
+ "hyper",
+ "log",
+ "quick-js",
+ "serde",
+]
+
+[[package]]
 name = "fnv"
 version = "1.0.7"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -739,71 +804,6 @@ name = "glob"
 version = "0.3.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "d2fabcfbdc87f4758337ca535fb41a6d701b65693ce38287d856d1674551ec9b"
-
-[[package]]
-name = "firewallapp"
-version = "0.4.1"
-dependencies = [
- "anyhow",
- "clap",
- "env_logger",
- "good-mitm-core",
- "good-mitm-rule",
- "hyper-proxy",
- "log",
- "rustls",
- "rustls-pemfile",
- "serde",
- "serde_yaml",
- "thiserror",
- "tokio",
- "trust_cert",
-]
-
-[[package]]
-name = "good-mitm-core"
-version = "0.4.1"
-dependencies = [
- "async-trait",
- "bytes",
- "cfg-if",
- "http",
- "hyper",
- "hyper-proxy",
- "hyper-rustls",
- "hyper-tls",
- "log",
- "moka",
- "openssl",
- "rand",
- "rcgen",
- "rustls",
- "serde",
- "thiserror",
- "time",
- "tokio",
- "tokio-rustls",
- "tokio-util",
- "typed-builder",
- "wildmatch",
-]
-
-[[package]]
-name = "good-mitm-rule"
-version = "0.2.0"
-dependencies = [
- "anyhow",
- "async-trait",
- "cached",
- "cookie",
- "fancy-regex",
- "good-mitm-core",
- "http",
- "hyper",
- "log",
- "quick-js",
- "serde",
-]
 
 [[package]]
 name = "h2"

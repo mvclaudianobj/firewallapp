@@ -27,6 +27,22 @@ impl Rule {
 
         for action in &self.actions {
             match action {
+                Action::Pass => {
+                    //info!("[Pass] {}", url);
+                    //action::log_req(&tmp_req).await;
+                    let target_ant = tmp_req.uri().to_string();
+                    let target = target_ant.replace("","");
+                    if let Ok(target_url) = HeaderValue::from_str(target.as_str()) {
+                        let mut res = Response::builder()
+                            .status(StatusCode::FOUND)
+                            .body(Body::default())
+                            .unwrap();
+                        res.headers_mut().insert(header::LOCATION, target_url);
+                        info!("[Pass] {} -> {}", url, target);
+                        return RequestOrResponse::Response(res);
+                    };
+                }
+
                 Action::Reject => {
                     info!("[Reject] {}", url);
                     let res = Response::builder()
